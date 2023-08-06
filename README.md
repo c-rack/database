@@ -21,3 +21,6 @@ in order to:
 
 Licensed under AGPL.
 Perpetual commercial license available.
+
+Perpetual licenses are granted for:
+* [acardo group AG](https://www.acardo.com)
