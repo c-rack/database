@@ -20,7 +20,8 @@ in order to:
   * by combining 3 libraries into 1, with full access to the underlying libraries
 
 Licensed under AGPL.
-Perpetual commercial license available.
+Perpetual commercial licenses are available.
 
 Perpetual licenses are granted for:
 * [acardo group AG](https://www.acardo.com)
+* [Dr. Rack AG](https://www.drrack.com)
