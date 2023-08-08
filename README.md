@@ -16,7 +16,7 @@ in order to:
 * enforce best practice and simplify developer experience
 
   * by always using a connection pool
-  * by providing an optional asynchronous slow query callback on nanosecond accuracy
+  * by providing an optional asynchronous slow query callback with nanosecond accuracy
   * by combining 3 libraries into 1, with full access to the underlying libraries
 
 Licensed under AGPL.
