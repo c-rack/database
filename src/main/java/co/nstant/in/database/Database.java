@@ -1,6 +1,8 @@
 package co.nstant.in.database;
 
 import java.util.HashSet;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.calcite.sql.validate.SqlConformanceEnum;
 import org.slf4j.Logger;
@@ -14,6 +16,8 @@ public class Database {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Database.class);
 	public static final long NO_SLOW_QUERY = -1;
+
+	private static Map<String, Object> directAccessMethods = new ConcurrentHashMap<>();
 
 	private HikariDataSource hikariDataSource;
 	private Sql2o sql2o;
@@ -136,7 +140,11 @@ public class Database {
 	}
 
 	private void logDirectAccess(String method) {
-		LOGGER.debug("Direct access to {} is used. Please open an issue why, so we can improve this library.", method);
+		if (!directAccessMethods.containsKey(method)) {
+			directAccessMethods.put(method, null);
+			LOGGER.warn("Direct access to {}.", method);
+			LOGGER.warn("Please open an issue why this was necessary, thanks.");
+		}
 	}
 
 }
